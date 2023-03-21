@@ -1,3 +1,3 @@
 # sharkcoder_curso_react_pro
 
-# Primeira aula do curso React Pro!!! s
+# Primeira aula do curso React Pro!!! 
