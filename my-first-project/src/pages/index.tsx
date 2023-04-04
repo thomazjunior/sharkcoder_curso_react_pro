@@ -1,15 +1,9 @@
-import { Inter } from 'next/font/google'
-import Layout from '../components/layout/'
+import React from 'react'
 
-
-
-
-const inter = Inter({ subsets: ['latin'] })
-
-export default function Home() {
+function index() {
   return (
-    <>
-      <Layout />
-    </>
+    <div>index</div>
   )
 }
+
+export default index

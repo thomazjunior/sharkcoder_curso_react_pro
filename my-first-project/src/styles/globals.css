@@ -26,6 +26,10 @@ img {
   display: block;
 }
 
+.layout {
+  justify-content: space-between;
+}
+
 .layout-header {
   background-color: rgb(130, 122, 147);
   height: 7vh;
@@ -37,4 +41,25 @@ img {
   display: flex;
   width: 35vh;
   justify-content: space-evenly;
+}
+
+.logo {
+  font-size: 22px;
+  color: white;
+  padding: 12px;
+  margin: 13px;
+  background-color: #252424;
+  border-radius: 40%;
+}
+
+.layout_footer {
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(130, 122, 147);
+}
+
+.main {
+  height: 100%;
 }
