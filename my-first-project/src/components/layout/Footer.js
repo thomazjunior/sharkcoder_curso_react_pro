@@ -1,10 +1,10 @@
 import React from 'react'
 import Logo from './Logo'
 
-function Footer() {
+function Footer(props) {
   return (
     <div className='layout_footer'>
-      Footer do Projeto
+      {props.name}
     </div>
   )
 }
