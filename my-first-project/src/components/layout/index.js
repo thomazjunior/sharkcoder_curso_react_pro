@@ -40,7 +40,7 @@ const closedMixin = (theme) => ({
   overflowX: "hidden",
   width: `calc(${theme.spacing(7)} + 1px)`,
   [theme.breakpoints.up("sm")]: {
-    width: `calc(${theme.spacing(8)} + 1px)`,
+    width: `calc(${theme.spacing(6)} + 1px)`,
   },
 });
 
@@ -169,7 +169,7 @@ function Layout({ children }) {
           ))}
         </List>
       </Drawer>
-      <Footer name="Footer do Projeto" />
+     
     </Box>
   );
 }
