@@ -44,8 +44,14 @@ img {
 
 .layout-navbar {
   display: flex;
-  width: 35vh;
+  width: 45vh;
   justify-content: space-evenly;
+  cursor: pointer;
+}
+
+.layout-navbar p:hover {
+  background-color: rgb(129, 108, 176);
+  border-radius: 10%;
 }
 
 .logo {
@@ -86,4 +92,15 @@ img {
 
 @media screen and (max-width: 700) {
   
+}
+
+
+.modal-backdrop {
+  position: fixed; 
+  top: 0;
+  left: 0; 
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
 }

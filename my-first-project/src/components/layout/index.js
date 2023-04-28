@@ -93,9 +93,15 @@ const Drawer = styled(MuiDrawer, {
 function Layout({ children }) {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
+  const [contador, setContador] = React.useState(0);
+  
 
   const handleDrawer = () => {
     setOpen((prevState) => !prevState);
+    setContador(contador + 1); //resultado == 1
+    setContador(() => {
+      return contador + 1;
+    })
   };
 
   const icon = !open ? (

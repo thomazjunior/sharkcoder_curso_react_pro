@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { experimentalStyled as styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import Avatar from '@mui/material/Avatar';
+import { AlunosContext } from "../context/AlunosContext";
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -16,6 +16,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 function index() {
   const [alunos, setAlunos] = useState([]);
+  const alunos2 = useContext(AlunosContext);
 
   //JSON representation [{nome: 'João', email: 'dycjh@example.com'},
   //                     { nome: 'Maria', email: 'dycjh@example.com' }]
@@ -24,15 +25,9 @@ function index() {
   // function nomedaFuncao(){corpo da funcao}
 
   useEffect(() => {
-    async function buscarAlunos() {
-      const response = await fetch(
-        "https://jsonplaceholder.typicode.com/users"
-      );
-      const data = await response.json();
-      setAlunos(data);
-    }
-    buscarAlunos();
-  }, []);
+    console.log(alunos2)
+    setAlunos(alunos2)
+  }, [alunos2]);
 
   return (
     <Box sx={{ flexGrow: 1, textAlign: 'center' }}>
@@ -42,7 +37,7 @@ function index() {
         spacing={{ xs: 2, md: 3 }}
         columns={{ xs: 4, sm: 8, md: 12 }}
       >
-        {alunos.map((aluno) => (
+        {alunos?.map((aluno) => (
           //xs sm md lg xl 
           <Grid item xs={12} sm={12} md={6} key={index}>
             <Item>

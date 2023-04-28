@@ -14,6 +14,7 @@ function NavBar() {
       <p onClick={() => handleClick("/horarios")}>Horários</p>
       <p onClick={() => handleClick("/ondeEstamos")}>Onde Estamos</p>
       <p onClick={() => handleClick("/admin")}>Gerenciar</p>
+      <p onClick={() => handleClick("/testemunhos")}>Testemunhos</p>
     </div>
   );
 }
