@@ -7,7 +7,7 @@ function Header() {
   return (
       <div className='layout-header'>
          
-          <Logo titulo="SharkCoders Cursos" />
+          <Logo titulo="SharkCoders Curso React Pro" />
           <NavBar />
           <Avatar />
         </div>
