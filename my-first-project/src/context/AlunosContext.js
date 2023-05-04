@@ -17,8 +17,17 @@ function AlunosProvider({ children }) {
     fetchTestemunho();
   }, []);
 
-  const dispatch = (newTestemunho) => {
-    setAlunos((prevTestemunhos) => [...prevTestemunhos, newTestemunho]) //arrow function //spread
+  const dispatch = (testemunho, action) => {
+
+    if (action === 'add') {
+      setAlunos((prevTestemunhos) => [...prevTestemunhos, testemunho])
+    } else if (action === 'remove') { 
+      setAlunos((prevTestemunhos) => 
+        prevTestemunhos.filter((t) => t.id !== testemunho.id)
+      );
+    }
+
+     //arrow function //spread
   }
 
   return (
